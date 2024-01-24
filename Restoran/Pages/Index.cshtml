@@ -1,0 +1,276 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@using Microsoft.AspNetCore.Authorization
+@using System.Security.Claims
+@inject IAuthorizationService AuthorizationService
+@{
+
+    var result = AuthorizationService.AuthorizeAsync(User, "Admin");
+    MyClasses.yemekMenusu yemek = new MyClasses.yemekMenusu();
+}
+@inject MyData.Ihelper<MyClasses.Subeler> subeler
+@inject MyData.Ihelper<MyClasses.yemekMenusu> yemekMunu
+@inject MyData.Ihelper<MyClasses.yemekKatigorisi> yemekKat
+@inject MyData.Ihelper<MyClasses.AnaSayfaMessajleri> messaj
+
+<section class="landing-page" style="margin-top:-20px">
+
+    <div class="body-of-landingPage-flex">
+        <div class="txt-body">
+            <h1>Enjoy Our Delicious Meals</h1>
+            <p>
+                our meals are among the most deliciosu dishes prepared with care and
+                expert hands
+            </p>
+        </div>
+        <div class="img-body">
+            <img src="~/images/plate1.jpg"
+                 alt=""
+                 class="circle-image rotate linear infinite" />
+        </div>
+    </div>
+</section>
+
+
+<section class="second-about-page hidden">
+    <div class="images-container">
+        <div class="images-card">
+            <img src="../images/abot.jpg"
+                 alt="image of restaurant"
+                 class="grid-image first" />
+            <img src="../images/fingerprint.jpg" alt="" id="hover-img" />
+        </div>
+    </div>
+    <div class="txt">
+        <h3 class="title   scrollspy" id="about">about us</h3>
+        <h2>Welcome to shinobi</h2>
+        <p>
+            the best japanese restaurant you 'll ever go to , Meet the flavors
+            that will leave a mark on your taste buds
+        </p>
+    </div>
+</section>
+
+<!-- start subeler -->
+<section class="branches   scrollspy" id="branches">
+    <h3 class="title">our branches</h3>
+    <div class="carousel">
+        @foreach (var item in subeler.getAllData())
+        {
+
+
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-area">
+                        <img src="../images/Subeler/@item.Resim"
+                             alt="" />
+                    </div>
+
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <a asp-page="/Reservation" asp-route-id="@item.id" class="branch-link"><h4 class="branch-name">@item.SubeAdi</h4></a>
+
+                    }
+                    else
+                    {
+                        <a asp-area="Identity" asp-page="/Account/Login" class="branch-link"><h4 class="branch-name">@item.SubeAdi</h4></a>
+
+                    }
+                    <p>
+                        @item.About
+                    </p>
+                </div>
+            </div>
+        }
+
+    </div>
+</section>
+<!--subeler finished   -->
+<!-- start yemek menu -->
+
+
+<section class="yemek-menu    scrollspy" id="menu">
+    <h3 class="title">Menu</h3>
+
+
+    <div class="yemek-categori">
+        @foreach (var v in Model.Mykatigori)
+        {
+
+            <form method="get">
+
+                <input hidden name="state" value="ByKatigori" />
+                <input type="submit"  name="search" value="@v.Katigori" style="font-family:' Abril Fatface', 'sans-serif';" class="btn" />
+
+            </form>
+
+
+        }
+
+        <form method="get">
+
+            <input hidden name="state" value="all" />
+            <input type="submit" name="search" value="all" style="font-family:' Abril Fatface', 'sans-serif';" class="btn" />
+
+        </form>
+        <!-- ? burada silmek istedigin seyler omer -->
+        @*   <h4 id="sashimi"  class="menu-tab">
+        Sashimi
+        </h4>
+        <h4 id="maki" class="menu-tab">
+        maki <br />
+        <sub class="menu-tab">(1 roll cut in 5 pieces )</sub>
+        </h4> *@
+        <!--? omer java script ile yaptigim seyler burada dir sushi kategori olarak yapacaksin doner falan icerde durum menu  -->
+    </div>
+
+    <div class="yemek-menu-container">
+
+        @foreach (var item in Model.MyYemek)
+        {
+
+
+            <div class="yemek-carti">
+                <div style="display:flex;justify-content:space-between;width: 100%;">
+                    <div style="display:flex;">
+                        <div class="yemek-img-con">
+                            <img src="../images/YemekMenu/@item.Resim" class="yemek-img" />
+
+                        </div>
+                        <p>
+                            @item.Yemek_Adi
+
+                        </p>
+                    </div>
+                    <div>
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+
+
+                            <form method="post" id="Myf" asp-controller="Order" asp-action="Create"  >
+                                <input type="hidden" name="id" value="@item.id" />
+                                <input id="Mys" type="submit"  onclick="messaj()" value="+" style="font-family:' Abril Fatface', 'sans-serif';" class="btn" />
+
+                            </form>
+                        }
+                        else
+                        {
+                            @* <input type="submit" name="id" value="@item.id" style="font-family:' Abril Fatface', 'sans-serif';" class="btn" /> *@
+                            <a asp-area="Identity" asp-page="/Account/Login" class="btn">+</a>
+                        }
+                    </div>
+                </div>
+                <span class="price">@item.fiyat $</span>
+
+            </div>
+        }
+        
+           
+        @*    @{
+        MyClass s = new MyClass();
+
+        @foreach (var item in s.MyList)
+        {
+        <h1>@item</h1>
+        }
+        } *@
+
+    </div>
+</section>
+
+<!-- yemek menusu finished -->
+<!-- start reviews from customers -->
+<section class="review" style="margin-top:100px ;">
+    <h3 class="title">
+        Testimonial
+    </h3>
+    <div class="carousel" style=" padding: 50px">
+
+        @foreach (var item in messaj.getAllData())
+        {
+
+
+            <div class="review-card carousel-item"
+                 style="
+          text-align: center;
+          border: 2px solid #f3e9fa;
+          border-radius: 15px;
+          height: auto;
+        ">
+                <div class="review-image"
+                     style="width: 100px; height: 100px; margin: 15px auto">
+                    <img src="../images/AnaSayfaMessajleri/@item.Resim"
+                         alt=""
+                         width="100%"
+                         height="100%"
+                         style="object-fit: cover" />
+                </div>
+                <p>@item.Messaj</p>
+                <span> @item.Adi </span>
+            </div>
+        }
+        @*   <div class="review-card carousel-item"
+        style="
+        text-align: center;
+        border: 2px solid #cdc1d6;
+        border-radius: 15px;
+        height: auto;
+        ">
+        <div class="review-image"
+        style="width: 100px; height: 100px; margin: 15px auto">
+        <img src="./delete.png"
+        alt=""
+        width="100%"
+        height="100%"
+        style="object-fit: cover" />
+        </div>
+        <p>the best restaurant i 've ever go to is special</p>
+        <span> ubey saab </span>
+        </div>
+        <div class="review-card carousel-item"
+        style="
+        text-align: center;
+        text-wrap:balance;
+        border: 2px solid #a4a2a5;
+        border-radius: 15px;
+        height: auto;
+        padding: 10px;
+
+        ">
+        <div class="review-image"
+        style="width: 100px; height: 100px; margin: 15px auto">
+        <img src="../images/delete.png"
+        alt=""
+        width="100%"
+        height="100%"
+        style="object-fit: cover" />
+        </div>
+        <p>xostur</p>
+        <span> ciwan hammud </span>
+        </div> *@
+    </div>
+</section>
+
+<script>
+    function messaj() {
+        Swal.fire(
+            'Good job!',
+            'basariyla sepete eklendi',
+            'success'
+        )
+    }
+
+    new DateTimePickerComponent.DateTimePicker("select_date");
+
+  
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

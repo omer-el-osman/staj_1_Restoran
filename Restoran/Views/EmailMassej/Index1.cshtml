@@ -1,0 +1,241 @@
+﻿@model IEnumerable<MyClasses.Reservasyon>
+@using Microsoft.AspNetCore.Identity
+@inject MyData.Ihelper<MyClasses.Kullanici> Kullanici
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@using Microsoft.AspNetCore.Authorization
+@using System.Security.Claims
+@inject IAuthorizationService AuthorizationService
+@{
+    var UserId = "";
+    if (User.FindFirst(ClaimTypes.NameIdentifier)?.Value != null)
+    {
+        UserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+    }
+    var result = AuthorizationService.AuthorizeAsync(User, "Admin");
+    List<MyClasses.Reservasyon> MyReservasyon = new List<MyClasses.Reservasyon>();
+}
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style="margin:100px">
+    @if (result.Result.Succeeded)
+    {
+        @if (TempData["messaj"] != null)
+        {
+            <div class="alert alert-success">
+
+                <h3>@TempData["messaj"]</h3>
+
+            </div>
+        }
+        <h1>Reservasyon</h1>
+
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+        <form method="get" asp-action="search">
+            <input type="search" name="searchItem" class="search-field" />
+            <input type="submit" value="Search" class="btn-primary" />
+        </form>
+        <br />
+           <form method="get" asp-action="search">
+               <select name="searchItem" style="display:inline" >
+                   <option value="Bekleme">Bekleme</option>
+                       <option value="Onaylandi" >Onaylandi</option>
+                       <option value="Reddetme" >Reddetme</option>
+                           <option value="Iptal Edildi">Iptal Edildi</option>
+               </select>
+            
+            <input type="submit" value="Search" class="btn-primary" />
+        </form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Adı)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SoyAdı)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telefon)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SubeAdi)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Masa_num)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.tarih)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Durum)
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Adı)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SoyAdı)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Telefon)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SubeAdi)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Masa_num)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tarih)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Durum)
+                        </td>
+                        <td>
+                            <form method="post" asp-controller="EmailMassej" asp-action="Onaylama">
+                                <input type="hidden" name="id" value="@item.id" />
+                                <input id="Mys" type="submit" value="Onayla" style="font-family:' Abril Fatface', 'sans-serif';" class="btn" />
+
+                            </form>
+                            <form method="post" asp-controller="EmailMassej" asp-action="Reddetme">
+                                <input type="hidden" name="id" value="@item.id" />
+                                <input id="Mys" type="submit" value="Reddetme" style="font-family:' Abril Fatface', 'sans-serif';margin-top:20px" class="btn btn-danger" />
+
+                            </form>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        if (Model.ToList().Count < 5)
+        {
+            int id = 0;
+            <a asp-action="Index1" asp-route-id="@id">Ana Sayfa</a>
+        }
+        else
+        {
+            <a asp-action="Index1" asp-route-id="@Model.ToList().Last().id">Sonraki</a>
+        }
+
+    }
+    else
+    {
+
+
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Adı)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SoyAdı)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telefon)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SubeAdi)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Masa_num)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.tarih)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Durum)
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int id = 10;
+                    <a asp-action="Index1" asp-route-id="@id">Ana Sayfa</a>
+
+                }
+
+                @foreach(var re in Model)
+                {
+                    MyReservasyon.Add(re);
+                }
+                @foreach (var c in Kullanici.getAllData())
+                {
+                    var MyOrders = MyReservasyon.Select(s => s).Where(s => s.Adı == c.Adı && s.SoyAdı == c.SoyAdı);
+
+                    if (c.Email == User.Identity?.Name! && c.UserId == UserId)
+                    {
+
+                        foreach (var item in MyOrders)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Adı)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.SoyAdı)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Telefon)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.SubeAdi)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Masa_num)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.tarih)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Durum)
+                                </td>
+                                <td>
+                                    <form method="post" asp-controller="EmailMassej" asp-action="Iptal_Et">
+                                        <input type="hidden" name="id" value="@item.id" />
+                                        <input id="Mys" type="submit" value="Iptal Et" style="font-family:' Abril Fatface', 'sans-serif';" class="btn" />
+
+                                    </form>
+
+
+                                </td>
+                            </tr>
+                        }
+                    }
+                }
+            </tbody>
+        </table>
+    
+
+    }
+
+</div>

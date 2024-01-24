@@ -1,0 +1,61 @@
+﻿@model MyClasses.yemekMenusu
+
+@{
+	ViewData["Title"] = "Create";
+    Layout = "_LayoutKontrolPanel";
+
+}
+@inject MyData.Ihelper<MyClasses.yemekKatigorisi> yemekKati
+
+<div style="margin:100px">
+	<h1>Create</h1>
+	<h4>yemekMenusu</h4>
+	<hr />
+	<div class="row">
+		<div class="col-md-4">
+			<form asp-action="Create" enctype="multipart/form-data">
+				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+				
+				<div class="form-group">
+					<label asp-for="Yemek_Adi" class="control-label"></label>
+					<input asp-for="Yemek_Adi" class="form-control" />
+					<span asp-validation-for="Yemek_Adi" class="text-danger"></span>
+				</div>
+				<div class="form-group">
+					<label asp-for="fiyat" class="control-label"></label>
+					<input asp-for="fiyat" class="form-control" />
+					<span asp-validation-for="fiyat" class="text-danger"></span>
+				</div>
+				<div class="form-group">
+					<label asp-for="Resim" class="control-label"></label>
+					<input asp-for="Resim" type="file" class="form-control" />
+					<span asp-validation-for="Resim" class="text-danger"></span>
+				</div>
+				<div class="form-group">
+					<label asp-for="Yemek_Kategorisi" class="control-label"></label>
+					<select asp-for="Yemek_Kategorisi" class="form-control">
+						<option selected disabled>Lütfen boş bırakmayın</option>
+						@foreach (var item in yemekKati.getAllData())
+						{
+							<option value="@item.Katigori">@item.Katigori</option>
+						}
+
+					</select>
+					<span asp-validation-for="Yemek_Kategorisi" class="text-danger"></span>
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Create" class="btn btn-primary" />
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div>
+		<a asp-action="Index">Back to List</a>
+	</div>
+</div>
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+	}

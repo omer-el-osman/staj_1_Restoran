@@ -1,0 +1,80 @@
+﻿@model IEnumerable<MyClasses.yemekMenusu>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutKontrolPanel";
+
+}
+
+<div style="margin:100px">
+	@if (TempData["messaj"] != null)
+	{
+		<div class="alert alert-success">
+
+			<h3>@TempData["messaj"]</h3>
+
+		</div>
+	}
+	<h1>yemek Menusu</h1>
+
+	<p>
+		<a asp-action="Create">Create New</a>
+	</p>
+	<form method="get" asp-action="search">
+		<input type="search" name="searchItem" class="search-field" />
+		<input type="submit" value="Search" class="btn-primary" />
+	</form>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Yemek_Kategorisi)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Yemek_Adi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fiyat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resim)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Yemek_Kategorisi)
+                    </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yemek_Adi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fiyat)
+            </td>
+            <td>
+                        <img src="~/images/YemekMenu/@item.Resim" style="width:50px;height:50px;" />
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+    @{
+        if (Model.ToList().Count < 5)
+        {
+            int id = 0;
+            <a asp-action="Index" asp-route-id="@id">Ana Sayfa</a>
+        }
+        else
+        {
+            <a asp-action="Index" asp-route-id="@Model.ToList().Last().id">Sonraki</a>
+        }
+    }
+</div>

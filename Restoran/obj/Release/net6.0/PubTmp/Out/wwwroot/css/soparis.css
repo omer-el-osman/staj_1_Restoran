@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Manrope:wght@500&family=Nunito:wght@400;600;700;800;1000&family=Outfit:wght@300;400;600&family=Pacifico&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+
+  width: 100dvw;
+  height: auto;
+  overflow-x: hidden;
+}
+
+:root {
+  --primaryPadding: 20px;
+  --orange: #feaf39;
+  --lacivert: #353b4b;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Abril Fatface", sans-serif;
+}
+
+a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+p {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.orders {
+  background-color: var(--lacivert);
+}
+
+.title {
+  color: var(--orange);
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+  font-family: "Nunito";
+}
+
+.landingPage {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.header {
+  position: relative;
+}
+
+.header-flex-between {
+  width: 100%;
+  display: flex;
+  padding: var(--primaryPadding);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #353b4b;
+}
+
+.logos {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 50%;
+  height: 80%;
+  display: flex;
+}
+.logo > img {
+  max-width: 40%;
+}
+
+.burger-menu {
+  width: 9dvw;
+}
+.burger-menu > img {
+  max-width: 100%;
+}
+
+.navbar {
+  padding: 5px;
+
+  background-color: #353b4b;
+  display: none;
+}
+
+.list-item {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 5px;
+  text-transform: capitalize;
+  color: #feaf39;
+}
+
+.list-item > a:hover {
+  color: #d8eeff;
+}
+
+.list-item--img {
+  width: 42px;
+  height: 42px;
+  border: 1px solid black;
+}
+.list-item--img img {
+  width: 100%;
+}
+
+.table {
+  overflow-x: scroll;
+  width: 90%;
+  margin: 0 auto;
+  color: var(--orange);
+  background-color: var(--lacivert);
+}
+
+.full-cover {
+  box-shadow: 0 0 0 100vmax var(--lacivert);
+  clip-path: inset(-1px -100vmax);
+}
+
+.table thead {
+  border-bottom: 2px solid black;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/*  yemek menu*/
+.raw {
+  /* background-color: yellow; */
+  height: 160px;
+}
+
+.img-col {
+  width: 20%;
+  height: 100%;
+}
+.img-col > img {
+  width: auto;
+  height: 140px;
+  aspect-ratio: 1; /* will make width equal to height (500px container) */
+  object-fit: cover;
+}
+.name-col {
+  text-wrap: balance;
+}
+.price-col,
+.total-col,
+.delete-col {
+  width: 10%;
+  /* display: inline-block; */
+}
+
+.price-col,
+.total-col {
+  display: inline;
+}
+
+/* .price-col > span,
+.total-col > span {
+  margin-left: 20px;
+} */
+
+.quantity-col {
+  width: 10%;
+}
+
+.quantity-col > div {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.total-col,
+.delete-col,
+.price-col,
+.img-col,
+.name-col,
+.quantity-col {
+  /*text-align: center;*/
+  font-weight: 700;
+}
+
+.yemek-categori sub {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.yemek-menu-container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+/* 
+.yemek-carti {
+  height: 100px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  border: inset 2px #d1e5f5;
+  position: relative;
+  margin-bottom: 5px;
+  border-radius: 7px;
+  text-align: left;
+  text-wrap: balance;
+}
+
+.yemek-carti:hover {
+  background-color: var(--lacivert);
+  color: var(--orange);
+}
+
+.yemek-carti p {
+  text-indent: 10px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.price {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.yemek-img-con {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.yemek-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.yemek-carti-guncel {
+
+} */
+
+/* Footer css  */
+
+.footer {
+  background-color: var(--lacivert);
+  position: relative;
+  padding-top: 40px;
+}
+.footer h1,
+.footer h2,
+.footer p {
+  color: var(--orange);
+}
+
+.up {
+  padding: 20px;
+}
+
+.email-input {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+}
+
+#input {
+  width: 100%;
+  line-height: 40px;
+  border-radius: 9px;
+  background-color: white;
+}
+
+.footer-btn {
+  padding: 10px;
+  outline: none;
+
+  width: 50%;
+  margin: 10px 0 0 0;
+  border-radius: 9px;
+}
+
+.up p {
+  margin-bottom: 20px;
+}
+
+.up h2 {
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+/** how to control spaces between the lines  */
+.down {
+  width: 100%;
+  margin-top: 10px;
+  color: var(--orange);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  /* height: 500px; */
+}
+.down p {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: 600;
+}
+
+.huddle {
+  width: auto;
+  display: flex;
+  text-indent: 20px;
+  margin: 20px 0;
+
+  align-items: center;
+}
+
+.huddle p {
+  margin: 0;
+}
+
+.icons {
+  width: 100%;
+  margin-top: 20px;
+}
+.icons i {
+  font-size: 30px;
+  color: white;
+  margin-right: 20px;
+}
+
+button {
+  outline: none;
+}
+
+/* animations  */
+.circle-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+
+.rotate {
+  animation: rotation 9s;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 2s;
+}
+
+.show {
+  opacity: 1;
+}
+
+/* Nothing will happen yet, because we need to define the animation property’s rotation function. Add this CSS keyframe rule to your stylesheet: */
+
+/* mobile up to 480px
+tablet up 1199
+
+ */
+
+@media only screen and (min-width: 830px) {
+  /* /footer  */
+
+  .up {
+    height: 300px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .footer {
+    align-items: flex-start;
+  }
+
+  .email-input {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .email-input button {
+    padding: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  .up {
+    width: 50%;
+  }
+  .down {
+    width: 30%;
+    padding-top: 0;
+  }
+
+  .huddle1 {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .header-flex-between {
+    flex-direction: row;
+  }
+  .img-body {
+    margin-right: -150px;
+  }
+  .logos {
+    width: 30%;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+ 
+    padding: 10px;
+  }
+
+  .list {
+ 
+    padding: 10px 0;
+  }
+  .list-item {
+    display: inline-block;
+    border: 1px solid yellow;
+  }
+
+  .list-item--img {
+  
+    transform: translateY(6px);
+  }
+
+  /* this can be from the first media  */
+  .yemek-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .yemek-carti {
+    flex-basis: 48%;
+  }
+  /* this can finish */
+}

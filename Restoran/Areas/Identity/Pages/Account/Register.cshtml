@@ -1,0 +1,203 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "";
+}
+
+@* <h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h2>Create a new account.</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+             <div class="form-floating">
+                <input asp-for="Input.Adı" class="form-control" autocomplete="username" aria-required="true" />
+                <label asp-for="Input.Adı"></label>
+                <span asp-validation-for="Input.Adı" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Input.SoyAdı" class="form-control" autocomplete="username" aria-required="true" />
+                <label asp-for="Input.SoyAdı"></label>
+                <span asp-validation-for="Input.SoyAdı" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Input.Telefon" class="form-control" autocomplete="username" aria-required="true" />
+                <label asp-for="Input.Telefon"></label>
+                <span asp-validation-for="Input.Telefon" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                <label asp-for="Input.Email"></label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+                <label asp-for="Input.Password"></label>
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+                <label asp-for="Input.ConfirmPassword"></label>
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+        </form>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        <section>
+            <h3>Use another service to register.</h3>
+            <hr />
+            @{
+                if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                {
+                    <div>
+                        <p>
+                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
+                            about setting up this ASP.NET application to support logging in via external services</a>.
+                        </p>
+                    </div>
+                }
+                else
+                {
+                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                        <div>
+                            <p>
+                                @foreach (var provider in Model.ExternalLogins!)
+                                {
+                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                }
+                            </p>
+                        </div>
+                    </form>
+                }
+            }
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+ *@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link href="~/css/register.css" rel="stylesheet" />
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <section class="container register" style="position: relative;
+">
+        <div style="display: flex;
+       justify-content: space-between;
+        opacity: 0.8">
+            <a href="~/Index">
+                <i class="fa-solid fa-arrow-left" style="color: #f3e9fa"></i>
+            </a>
+            <div style="text-align: center">
+                <a asp-area="Identity" asp-page="/Account/Login">
+                    <i class="fa-solid fa-right-to-bracket" style="color: #f3e9fa">
+                        <br />
+                        <span style="
+                  font-size: 12px;
+                  text-transform: capitalize;
+                  font-family: 'Nunito', sans-serif;
+                ">login</span>
+                    </i>
+                </a>
+            </div>
+        </div>
+        <div class="image" style="position: relative; text-align: center">
+            <p style="
+            font-weight: 800;
+            padding: 5px;
+            letter-spacing: 2px;
+            font-size: 13px;
+          ">
+                WELCOME
+            </p>
+            <p style="text-wrap: balance; text-align: center">
+                Please sign in to benefit from our reservation and other campaigns.
+            </p>
+        </div>
+
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <!-- <label for="firstName">first name</label> -->
+            <div style="display: flex; justify-content: space-between;">
+                <div class="form-floating">
+
+                    <input asp-for="Input.Adı" 
+                          
+                           id="firstName"
+                           class="input-text name"
+                           placeholder="first name" autocomplete="username" aria-required="true" />
+
+
+                </div>
+                <div class="form-floating">
+
+
+                    <input asp-for="Input.SoyAdı"
+                          
+                           id="lastName"
+                           class="input-text name"
+                           placeholder="lastName" autocomplete="username" aria-required="true" />
+                </div>
+            </div>
+
+            <!-- <label for="">last name</label> -->
+
+
+            <div class="form-floating">
+
+                <input asp-for="Input.Email"  class="input-text" id="email" placeholder="Email" autocomplete="username" aria-required="true" />
+            </div>
+            <div class="form-floating">
+
+                <input asp-for="Input.Telefon"  id="phone" class="input-text" placeholder="Phone" autocomplete="username" aria-required="true" />
+            </div>
+            <div class="form-floating">
+
+                <input asp-for="Input.Password" class="input-text" id="password" placeholder="Password" autocomplete="new-password" aria-required="true" />
+            </div>
+            <div class="form-floating">
+
+                <input asp-for="Input.ConfirmPassword"  class="input-text" id="confirm-password" autocomplete="new-password" aria-required="true" placeholder=" Confirm Password" />
+            </div>
+
+
+
+            <!-- <div style="display: flex; justify-content: space-between;">
+            <div style="display: flex; text-indent: 5px"> -->
+            <!-- <input type="checkbox" class="input-checkbox" id="check" />
+               <label for="check">Remember me</label>
+             </div>
+             <a href="" style="color: #feaf39; text-decoration: none; ">forget password </a>
+            </div> -->
+            <button id="registerSubmit" type="submit" class="btn">register</button>
+        </form>
+    </section>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+</body>
+</html>
+

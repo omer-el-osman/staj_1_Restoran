@@ -1,0 +1,55 @@
+﻿@page
+@model Restoran.Pages.AdminModel
+@{
+    Layout = "_LayoutKontrolPanel";
+}
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+@using Microsoft.AspNetCore.Authorization
+@using System.Security.Claims
+@inject IAuthorizationService AuthorizationService
+@{
+
+    var result = AuthorizationService.AuthorizeAsync(User, "Admin");
+    var UserId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+
+}
+@inject MyData.Ihelper<MyClasses.Kullanici> Kullanici
+
+<section class="yemek-menu    scrollspy" id="menu">
+    <h3 class="title">Kontrol Panel</h3>
+
+    <div class="yemek-menu-container" style="margin-left:28%">
+
+        @if (result.Result.Succeeded)
+        {
+            <div class="yemek-carti">
+
+                <p>
+                    Yeni'den Hosgeldiniz Admin
+                </p>
+            </div>
+        }
+        else
+        {
+            @foreach (var c in Kullanici.getAllData())
+            {
+
+                if (c.Email == @User.Identity?.Name! && c.UserId == UserId)
+                {
+                    <div class="yemek-carti">
+
+                        <p>
+                            Yeni'den Hosgeldiniz @c.Adı
+                        </p>
+                    </div>
+                }
+            }
+        }
+
+    </div>
+</section>

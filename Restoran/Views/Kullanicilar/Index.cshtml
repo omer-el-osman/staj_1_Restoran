@@ -1,0 +1,136 @@
+﻿@model IEnumerable<MyClasses.Kullanici>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutKontrolPanel";
+
+}
+
+@{
+ ViewData["Title"] = "Index";
+ int KullaniciSayisi = 0;
+ int confirming_Email = 0;
+ int Not_confirming_Email = 0;
+ string pass ="*****";
+
+}
+@foreach (var item in Model)
+{
+ KullaniciSayisi++;
+ if (item.Email_Onaylama == true)
+ {
+  confirming_Email++;
+ }
+ else
+ {
+  Not_confirming_Email++;
+ }
+
+}
+<div style="margin:100px">
+ <h1 class="btn btn-dark">Kullanicilar</h1>
+ <h3 class="btn btn-success">Kullanici Sayisi : @KullaniciSayisi</h3>
+ <h3 class="btn btn-success">confirming Email : @confirming_Email</h3>
+ <h3 class="btn btn-success">Not confirming Email : @Not_confirming_Email</h3>
+
+	@if (TempData["messaj"] != null)
+	{
+		<div class="alert alert-success">
+
+			<h3>@TempData["messaj"]</h3>
+
+		</div>
+	}
+	<h1>Kullanicilar</h1>
+@* 
+	<p>
+		<a asp-action="Create">Create New</a>
+	</p> *@
+	<form method="get" asp-action="search">
+		<input type="search" name="searchItem" class="search-field" />
+		<input type="submit" value="Search" class="btn-primary" />
+	</form>
+<table class="table">
+    <thead>
+        <tr>
+           @*  <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.Adı)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoyAdı)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email_Onaylama)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+           @*  <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Adı)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoyAdı)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.password)
+            </td>
+           
+                        @if (item.Email_Onaylama == true)
+                        {
+                        <td style="color:green">
+                            Onaylandi
+                        </td>
+                    }
+                    else
+                    {
+                        <td style="color:red">
+                            Onaylanmadi
+                        </td>
+                    }
+
+            
+@*            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
+    @{
+        if (Model.ToList().Count < 5)
+        {
+            int id = 0;
+            <a asp-action="Index" asp-route-id="@id">Ana Sayfa</a>
+        }
+        else
+        {
+            <a asp-action="Index" asp-route-id="@Model.ToList().Last().id">Sonraki</a>
+        }
+    }
+</div>

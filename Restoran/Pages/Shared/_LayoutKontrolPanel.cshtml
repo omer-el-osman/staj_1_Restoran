@@ -1,0 +1,296 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+@using Microsoft.AspNetCore.Authorization
+@using System.Security.Claims
+@inject IAuthorizationService AuthorizationService
+@{
+
+    var result = AuthorizationService.AuthorizeAsync(User, "Admin");
+
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Restoran.styles.css" asp-append-version="true" />
+    <link rel="icon" href="~/images/dish.png" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+
+    @* <link href="~/css/site.css" rel="stylesheet" /> *@
+    <link href="~/css/style.css" rel="stylesheet" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restoran</title>
+    <style>
+        :root {
+            --primaryPadding: 20px;
+            --orange: #feaf39;
+            --lacivert: #353b4b;
+        }
+        .input-checkbox {
+            appearance: none;
+            --web-kit-appearance: none;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            background-color: #d5d5d5;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .input-checkbox::after {
+                font-family: "Font Awesome 6 Free";
+                content: url(../images/check-mark.png);
+                display: none;
+            }
+
+            .input-checkbox:hover {
+                background-color: #a5a5a5;
+            }
+
+            .input-checkbox:checked {
+                background-color: var(--orange);
+            }
+
+                .input-checkbox:checked::after {
+                    display: block;
+                }
+    </style>
+</head>
+
+<body>
+
+    <section class="landing-page">
+        <!-- header start -->
+        <header class="header">
+            <div class="header-flex-between">
+                <div class="logos">
+                    <div class="logo">
+                        <img src="~/images/sushi.png" alt="" class="img-logo" />
+                        <img src="~/images/Shinobi Japanese Restaurant.png"
+                             alt=""
+                             class="img-logo" />
+                    </div>
+
+                    <div class="burger-menu">
+                        <img src="~/images/burger-menu.png"
+                             alt=""
+                             class="img-logo"
+                             id="bur-menu" />
+                    </div>
+                </div>
+
+                <div class="navbar">
+                    <ul class="list">
+                        <li class="list-item"><a href="~/Index">Home</a></li>
+
+                        @if (result.Result.Succeeded)
+                        {
+
+                            <li class="list-item"><a href="~/Kullanicilar/Index">Kullanicilar</a></li>
+
+                            <li class="list-item"><a href="~/Subeler/Index">Subeler</a></li>
+                            
+                            <li class="list-item"><a href="~/EmailMassej/Index1">Reservasyon</a></li>
+
+                            <li class="list-item"><a href="~/yemekMenusu/Index">yemek Menusu</a></li>
+
+                            <li class="list-item"><a href="~/yemekKatigorisi/Index">yemek Katigorisi</a></li>
+
+                            <li class="list-item"><a href="~/AnaSayfaMessajleri/Index">Ana Sayfa Messajleri</a></li>
+                            <li class="list-item"><a href="~/Order/Index">Order</a></li>
+
+                        }
+                        <!-- TODO : BURADA DROPDOWN EKLE  -->
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            @*   <li class="list-item">
+                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"> Hello @User.Identity?.Name!</a>
+                        </li> *@
+                            <li class="list-item">
+                                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                                    <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="list-item"><a asp-area="Identity" asp-page="/Account/Register">register</a></li>
+                            <li class="list-item"><a asp-area="Identity" asp-page="/Account/Login">login</a></li>
+                        }
+
+
+
+
+
+                        @*  <li class="list-item ">
+                        <a> <partial name="_LoginPartial" /></a>
+                        </li> *@
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+        <!-- body of the first page -->
+        <!-- body of first page finished  -->
+    </section>
+    <!-- first page burada bitiyor  -->
+    <!-- finish review from customer -->
+    <!--
+
+
+
+      burada reservasion yeri sadece kaydi varsa eklenir bunu js ile dene
+
+
+
+     -->
+    @RenderBody()
+
+    <!-- footer  -->
+    <footer class="footer scrollspy" id="footer">
+
+
+        <!-- footer  -->
+
+
+        <div class="up">
+            <!-- <h3 class="title">
+              NEWSLETTER
+            </h3>
+            <p>
+              Receive exclusive offers and discounts in your mailbox
+            </p>
+            <div class="email-input">
+              <input type="email" name="email" id="input">
+              <button class="body-button footer-btn">
+                Subscribe
+              </button>
+            </div> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12037.849355291097!2d28.974791952491515!3d41.03701747685389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7650656bd63%3A0x8ca058b28c20b6c3!2sTaksim%20Square%2C%20%C5%9Eehit%20Muhtar%2C%2034435%20Beyo%C4%9Flu%2F%C4%B0stanbul!5e0!3m2!1sen!2str!4v1692624894084!5m2!1sen!2str" style="border:0; width: 100%;
+              height: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+        <div class="down">
+            <div class="huddle huddle1">
+                <img src="~/images/icon-messages.svg" alt="">
+                <h3 class="title">Shinibo hot line </h3>
+            </div>
+            <p>The "hot line" is where the food is cooked, the cookers,</p>
+            <div class="huddle">
+                <img src="~/images/icon-phone.svg" alt="">
+                <p>Phone</p>
+            </div>
+            <div class="huddle">
+                <img src="~/images/icon-email.svg" alt="">
+                <p>
+                    aboosh.sa262000@gmail.com
+                </p>
+
+            </div>
+
+            <div class="icons">
+                <a href="https://github.com/ubeysaab" target="_blank">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ubeysaab/" target="_blank">
+                    <i class="fa-brands fa-linkedin">    </i>
+                </a>
+
+            </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- defer attribute to make sure that  js will run after html body  -->
+    @* <script defer src="./index.js"></script> *@
+
+    <script src="~/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".carousel").carousel({
+                padding: 100,
+            });
+            autoplay();
+            function autoplay() {
+                $(".carousel").carousel("next");
+                setTimeout(autoplay, 4500);
+            }
+        });
+
+        // $('.carousel.carousel-slider').carousel({
+        //   fullWidth: true,
+        //   indicators: true
+
+        // });
+        $('.scrollspy').scrollSpy();
+
+
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+</body>
+</html>
+
+<!-- <section class="subelerimiz">
+
+  <h2>
+    subelerimiz
+  </h2>
+
+
+
+</section>
+   -->

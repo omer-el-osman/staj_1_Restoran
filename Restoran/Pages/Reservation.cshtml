@@ -1,0 +1,181 @@
+﻿@page "{id:int}"
+@model Restoran.Pages.ReservationModel
+@{
+    Layout = "";
+}
+@inject MyData.Ihelper<MyClasses.Kullanici> Kullanici
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@using Microsoft.AspNetCore.Authorization
+@using System.Security.Claims
+@inject IAuthorizationService AuthorizationService
+@{
+    var UserId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+    var x = 0;
+}
+
+@inject MyData.Ihelper<MyClasses.Subeler> subeler
+@inject MyData.Ihelper<MyClasses.Reservasyon> REser
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation</title>
+    <link href="https://cdn.jsdelivr.net/gh/marcellosurdi/DateTimePickerComponent/dist/css/date-time-picker-component.min.css"
+          rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/gh/marcellosurdi/DateTimePickerComponent/dist/js/date-time-picker-component.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    @* <link rel="stylesheet" href="resrvasyon.css"> *@
+    <link href="~/css/resrvasyon.css" rel="stylesheet" />
+
+    <style>
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .up img {
+            width: 100%;
+            position: relative;
+            z-index: -8;
+            height: 1500px;
+            /* opacity: 0.6; */
+        }
+
+        header {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            transform: translate(-50%,-50%);
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="first-page">
+        <div class="up">
+
+            <img src="~/images/11.jpg" alt=" background-image">
+
+            <header>
+                <a href="~/Index">  <i class="fa-solid fa-arrow-left" style="color: #353B4B;"></i></a>
+
+
+            </header>
+        </div>
+
+    </section>
+  
+    <div id="select_date" class="datetime-container">
+    </div>
+    <div class="reservation-infomations">
+
+
+        <form action="/EmailMassej/Index" method="post">
+            @foreach (var c in Kullanici.getAllData())
+            {
+
+                if (c.Email == @User.Identity?.Name! && c.UserId == UserId)
+                {
+
+                    <input type="text" name="Adi" value="@c.Adı" id="" class="inp" placeholder="name" />
+                    <input type="text" name="SoyAdi" value="@c.SoyAdı" id="" class="inp" placeholder="lastName" />
+                    <input type="text" name="Email" value="@c.Email" id="" class="inp" placeholder="email" />
+                    <input type="text" name="tel" value="@c.Telefon" id="" class="inp" placeholder="number of Guests" />
+                    <!-- sube secme burada  -->
+                }
+
+            }
+            <input type="datetime-local" name="tarih" id="" class="inp" placeholder="Tarih" />
+            <input type="text" value="@Model.subelers.SubeAdi" name="SubeAdi" class="inp" placeholder="branch" />
+
+            @*   <input list="branches" name="branch" placeholder="select branch" class="inp" />
+            <datalist name="SubeAdi" id="branches">
+            @foreach (var item in subeler.getAllData())
+            {
+            <option value="@item.SubeAdi"> @item.SubeAdi </option>
+
+            }
+
+            </datalist> *@
+
+
+            <div class="tables">
+
+                @for (int i = 0; i < Model.subelers.masalar; i += 1)
+                {
+
+
+
+                    var My = Model.Reser.Select(c => c).Where(c => c.Durum == "Onaylandi" && c.Masa_num == i && c.SubeAdi == Model.subelers.SubeAdi).FirstOrDefault();
+                    if (My != null)
+                    {
+
+                        <input type="radio" name="masa_num" id="my" onclick="errorMessaj()" class="table" style="background-color:orange" value="@i">
+
+
+                    }
+
+                    else
+                    {
+                        <input type="radio" name="masa_num" id="my" class="table" value="@i">
+
+                    }
+
+
+
+
+                }
+
+
+                @*  <input type="radio" name="table" id="" class="table">
+                <input type="radio" name="table" id="" class="table">
+                <input type="radio" name="table" id="" class="table">
+                <input type="radio" name="table" id="" class="table">
+                <input type="radio" name="table" id="" class="table">
+                <input type="radio" name="table" id="" class="table"> *@
+
+            </div>
+            <button class="btn" onclick="messaj()"> submit</button>
+
+            <!-- sube secme bitti -->
+        </form>
+
+    </div>
+
+    <script>
+        function messaj() {
+            Swal.fire(
+                '!',
+                'Lutfen talebinizin degerlendirilmesini bekleyin',
+                '!'
+            )
+        }
+
+        new DateTimePickerComponent.DateTimePicker("select_date");
+
+
+        function errorMessaj(){
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Bu masa suan doludur',
+                footer: '<a href="">Why do I have this issue?</a>'
+            })
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
+

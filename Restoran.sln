@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restoran", "Restoran\Restoran.csproj", "{0AB3AD21-3C37-4892-BC0C-DB18391E23EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyClasses", "MyClasses\MyClasses.csproj", "{7005C728-FF44-4954-AEBD-F206D6962DAB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyData", "MyData\MyData.csproj", "{508E366E-E49B-4847-820B-F3DEB864B40A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AB3AD21-3C37-4892-BC0C-DB18391E23EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AB3AD21-3C37-4892-BC0C-DB18391E23EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AB3AD21-3C37-4892-BC0C-DB18391E23EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AB3AD21-3C37-4892-BC0C-DB18391E23EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7005C728-FF44-4954-AEBD-F206D6962DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7005C728-FF44-4954-AEBD-F206D6962DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7005C728-FF44-4954-AEBD-F206D6962DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7005C728-FF44-4954-AEBD-F206D6962DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{508E366E-E49B-4847-820B-F3DEB864B40A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{508E366E-E49B-4847-820B-F3DEB864B40A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{508E366E-E49B-4847-820B-F3DEB864B40A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{508E366E-E49B-4847-820B-F3DEB864B40A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {972362E3-EBB9-4841-BBC9-19B419D756ED}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Nunito:wght@400;600;700;800;1000&family=Outfit:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Nunito:wght@400;600;700;800;1000&family=Outfit:wght@300;400;600&family=Pacifico&display=swap");
+
+/* reset */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryPadding: 20px;
+  --orange: #feaf39;
+  --lacivert: #353b4b;
+}
+
+label,a,
+p {
+  font-family: "Nunito", sans-serif;
+  color: var(--orange);
+  margin-bottom: 20px;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+   align-items: center;
+  justify-content: center;
+
+}
+
+
+
+
+.btn {
+  user-select: none;
+  margin-top: 20px;
+  width: 100%;
+  height: 40px;
+
+  background-color: #feaf39;
+  color: var(--lacivert);
+  box-shadow:0px 5px 3px 0 white ;
+  font-weight: 600;
+  font-size: 24px;
+  border-radius: 5px;
+  
+}
+
+
+
+.container {
+  border: 1px solid #d5d5d5;
+  border-radius: 16px;
+  height: 90%;
+  width: 90%;
+  margin: 0 auto ;
+  padding: 30px;
+  background-color: var(--lacivert);
+}
+
+
+
+.input-text {
+  margin-bottom: 20px;
+  /* line-height: 35px; */
+  width: 100%;
+outline: none;
+border: none;
+  caret-color: var(--orange);
+font-size: 20px;
+  color: var(--orange);
+
+}
+
+
+input {
+  line-height: normal;
+  display: block;
+  border: none;
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  transition: all 0.5s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: linear-gradient(
+    to bottom,
+    rgba(245, 16, 46, 0) 96%,
+    #cdc6d7 4%
+  );
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+input::placeholder {
+  color: #cdc6d7;
+  font-size: 15px;
+  font-family: "Nunito", sans-serif;
+  text-transform: capitalize;
+}
+
+input:focus {
+  background: linear-gradient(
+    to bottom,
+    rgba(245, 16, 46, 0) 96%,
+    #feaf39 4%
+  );
+  transform: translateY(-10px);
+}
+input:focus::placeholder {
+  color: #feaf39;
+  transform: translateY(-10px);
+  font-size: 14px;
+}
+/* TODO : MAKE LAYOUT LOOK PRETTY ON AUTOFILL WE NEED TO LEARN IT  */
+
+.name {
+  width: 45%;
+  display: inline;
+}
+
+
+@media only screen and (min-width:520px)
+{
+  .container {
+    width:60% ;
+    height: 60%;
+  }
+}
+
+@media only screen and (min-width : 992px)
+{
+
+  .container {
+    width: 475px;
+    height: 90%;
+  }
+}
+
+
+

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MyClasses.yemekKatigorisi>
+
+@{
+    ViewData["Title"] = "Index";
+	Layout = "_LayoutKontrolPanel";
+
+}
+<div style="margin:100px">
+	@if (TempData["messaj"] != null)
+	{
+		<div class="alert alert-success">
+
+			<h3>@TempData["messaj"]</h3>
+
+		</div>
+	}
+	<h1>yemek Katigorisi</h1>
+
+	<p>
+		<a asp-action="Create">Create New</a>
+	</p>
+	<form method="get" asp-action="search">
+		<input type="search" name="searchItem" class="search-field" />
+		<input type="submit" value="Search" class="btn-primary" />
+	</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Katigori)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Katigori)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@{
+		if (Model.ToList().Count < 5)
+		{
+			int id = 0;
+			<a asp-action="Index" asp-route-id="@id">Ana Sayfa</a>
+		}
+		else
+		{
+		<a asp-action="Index" asp-route-id="@Model.ToList().Last().id">Sonraki</a>
+		}
+	}
+</div>

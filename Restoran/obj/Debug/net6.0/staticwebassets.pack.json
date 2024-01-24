@@ -1,0 +1,645 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Restoran.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Restoran.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\.gitignore",
+      "PackagePath": "staticwebassets\\card-master\\.gitignore"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\.gitmodules",
+      "PackagePath": "staticwebassets\\card-master\\.gitmodules"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\.npmignore",
+      "PackagePath": "staticwebassets\\card-master\\.npmignore"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\CONTRIBUTING.md",
+      "PackagePath": "staticwebassets\\card-master\\CONTRIBUTING.md"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\LICENSE",
+      "PackagePath": "staticwebassets\\card-master"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\README.md",
+      "PackagePath": "staticwebassets\\card-master\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\bower.json",
+      "PackagePath": "staticwebassets\\card-master\\bower.json"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\dist\\card.css",
+      "PackagePath": "staticwebassets\\card-master\\dist\\card.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\dist\\card.js",
+      "PackagePath": "staticwebassets\\card-master\\dist\\card.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\dist\\card.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\card-master\\dist\\card.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\dist\\jquery.card.js",
+      "PackagePath": "staticwebassets\\card-master\\dist\\jquery.card.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\dist\\jquery.card.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\card-master\\dist\\jquery.card.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\package-lock.json",
+      "PackagePath": "staticwebassets\\card-master\\package-lock.json"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\package.json",
+      "PackagePath": "staticwebassets\\card-master\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\public\\index.html",
+      "PackagePath": "staticwebassets\\card-master\\public\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\coffee\\card.coffee",
+      "PackagePath": "staticwebassets\\card-master\\src\\coffee\\card.coffee"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\coffee\\jquery.card.coffee",
+      "PackagePath": "staticwebassets\\card-master\\src\\coffee\\jquery.card.coffee"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\browsers\\_ie.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\browsers\\_ie.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\browsers\\_safari.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\browsers\\_safari.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\card.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\card.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\cards\\_amex.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\cards\\_amex.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\cards\\_card.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\cards\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\cards\\_dankort.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\cards\\_dankort.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\cards\\_dinersclub.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\cards\\_dinersclub.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\cards\\_discover.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\cards\\_discover.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\cards\\_elo.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\cards\\_elo.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\cards\\_hipercard.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\cards\\_hipercard.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\cards\\_jcb.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\cards\\_jcb.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\cards\\_maestro.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\cards\\_maestro.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\cards\\_mastercard.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\cards\\_mastercard.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\cards\\_troy.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\cards\\_troy.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\cards\\_unionpay.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\cards\\_unionpay.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\cards\\_visa.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\cards\\_visa.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\cards\\_visaelectron.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\cards\\_visaelectron.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\logos\\_amex.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\logos\\_amex.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\logos\\_dankort.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\logos\\_dankort.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\logos\\_dinersclub.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\logos\\_dinersclub.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\logos\\_discover.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\logos\\_discover.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\logos\\_elo.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\logos\\_elo.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\logos\\_hipercard.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\logos\\_hipercard.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\logos\\_jcb.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\logos\\_jcb.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\logos\\_logo.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\logos\\_logo.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\logos\\_maestro.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\logos\\_maestro.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\logos\\_mastercard.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\logos\\_mastercard.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\logos\\_troy.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\logos\\_troy.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\logos\\_unionpay.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\logos\\_unionpay.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\logos\\_visa.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\logos\\_visa.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\src\\scss\\logos\\_visaelectron.scss",
+      "PackagePath": "staticwebassets\\card-master\\src\\scss\\logos\\_visaelectron.scss"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\card-master\\webpack.config.js",
+      "PackagePath": "staticwebassets\\card-master\\webpack.config.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\css\\register.css",
+      "PackagePath": "staticwebassets\\css\\register.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\css\\resrvasyon.css",
+      "PackagePath": "staticwebassets\\css\\resrvasyon.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\css\\soparis.css",
+      "PackagePath": "staticwebassets\\css\\soparis.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\css\\styleLogin.css",
+      "PackagePath": "staticwebassets\\css\\styleLogin.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\11.jpg",
+      "PackagePath": "staticwebassets\\images\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\Shinobi Japanese Restaurant.png",
+      "PackagePath": "staticwebassets\\images\\Shinobi Japanese Restaurant.png"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\Shinobi Japanese Restaurant.svg",
+      "PackagePath": "staticwebassets\\images\\Shinobi Japanese Restaurant.svg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\Subeler\\411a0b50-2c47-4e4c-865e-e0a281ac5384-4.jpg",
+      "PackagePath": "staticwebassets\\images\\Subeler\\411a0b50-2c47-4e4c-865e-e0a281ac5384-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\Subeler\\511032a9-1a6e-40e4-a876-c64fe596c59f-5.jpg",
+      "PackagePath": "staticwebassets\\images\\Subeler\\511032a9-1a6e-40e4-a876-c64fe596c59f-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\Subeler\\861228bc-42ab-4d07-91b5-129db24fa175-2.jpg",
+      "PackagePath": "staticwebassets\\images\\Subeler\\861228bc-42ab-4d07-91b5-129db24fa175-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\YemekMenu\\088ad073-c723-47e6-8431-fcc773ed9e99-2.jpg",
+      "PackagePath": "staticwebassets\\images\\YemekMenu\\088ad073-c723-47e6-8431-fcc773ed9e99-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\YemekMenu\\14a57f4c-7bd8-41cf-afde-97ab590fa03f-4.jpg",
+      "PackagePath": "staticwebassets\\images\\YemekMenu\\14a57f4c-7bd8-41cf-afde-97ab590fa03f-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\YemekMenu\\3d1f76da-a7fb-4292-be5c-6477a0da5640-2.jpg",
+      "PackagePath": "staticwebassets\\images\\YemekMenu\\3d1f76da-a7fb-4292-be5c-6477a0da5640-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\YemekMenu\\85caed9e-fd5f-478e-b1dc-cd0d8cb91071-5.jpg",
+      "PackagePath": "staticwebassets\\images\\YemekMenu\\85caed9e-fd5f-478e-b1dc-cd0d8cb91071-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\YemekMenu\\cd1d4a05-7f74-4660-b6ef-213fef61b9ba-icons8-reservation-64.png",
+      "PackagePath": "staticwebassets\\images\\YemekMenu\\cd1d4a05-7f74-4660-b6ef-213fef61b9ba-icons8-reservation-64.png"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\abot.jpg",
+      "PackagePath": "staticwebassets\\images\\abot.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\backgroundOfFirstPage.jpg",
+      "PackagePath": "staticwebassets\\images\\backgroundOfFirstPage.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\burger-menu.png",
+      "PackagePath": "staticwebassets\\images\\burger-menu.png"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\chair.png",
+      "PackagePath": "staticwebassets\\images\\chair.png"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\check-mark.png",
+      "PackagePath": "staticwebassets\\images\\check-mark.png"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\cutlery.png",
+      "PackagePath": "staticwebassets\\images\\cutlery.png"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\delete.png",
+      "PackagePath": "staticwebassets\\images\\delete.png"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\dish.png",
+      "PackagePath": "staticwebassets\\images\\dish.png"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\fingerprint.jpg",
+      "PackagePath": "staticwebassets\\images\\fingerprint.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\icon-email.svg",
+      "PackagePath": "staticwebassets\\images\\icon-email.svg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\icon-messages.svg",
+      "PackagePath": "staticwebassets\\images\\icon-messages.svg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\icon-phone.svg",
+      "PackagePath": "staticwebassets\\images\\icon-phone.svg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\icons8-table-64.png",
+      "PackagePath": "staticwebassets\\images\\icons8-table-64.png"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\ninja.png",
+      "PackagePath": "staticwebassets\\images\\ninja.png"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\painting-sushi-plate-with-picture-fish-it.jpg",
+      "PackagePath": "staticwebassets\\images\\painting-sushi-plate-with-picture-fish-it.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\pexels-rachel-claire-4577179.jpg",
+      "PackagePath": "staticwebassets\\images\\pexels-rachel-claire-4577179.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\plate1.jpg",
+      "PackagePath": "staticwebassets\\images\\plate1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\procurement (1).png",
+      "PackagePath": "staticwebassets\\images\\procurement (1).png"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\reservasyon.jpg",
+      "PackagePath": "staticwebassets\\images\\reservasyon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\restarantImages\\damien-santos-G07iuQFzMS4-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\restarantImages\\damien-santos-G07iuQFzMS4-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\restarantImages\\geraldine-lewa-axgXb6_Tz3I-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\restarantImages\\geraldine-lewa-axgXb6_Tz3I-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\restarantImages\\patrick-tomasso-NlcCPeKNmwg-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\restarantImages\\patrick-tomasso-NlcCPeKNmwg-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\restarantImages\\yu-BLV9FXiw9lw-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\restarantImages\\yu-BLV9FXiw9lw-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\images\\sushi.png",
+      "PackagePath": "staticwebassets\\images\\sushi.png"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\hosse\\OneDrive\\Desktop\\Staj_1_Restoran\\Restoran\\Restoran\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Restoran.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Restoran.props",
+      "PackagePath": "build\\Restoran.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Restoran.props",
+      "PackagePath": "buildMultiTargeting\\Restoran.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Restoran.props",
+      "PackagePath": "buildTransitive\\Restoran.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

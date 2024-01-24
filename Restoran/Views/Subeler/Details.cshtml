@@ -1,0 +1,45 @@
+﻿@model MyClasses.Subeler
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "_LayoutKontrolPanel";
+
+}
+<div style="margin:100px">
+<h1>Details</h1>
+
+<div>
+    <h4>Subeler</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SubeAdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SubeAdi)
+        </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.masalar)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.masalar)
+            </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.About)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.About)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Resim)
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="~/images/Subeler/@Model.Resim" style="width:50px;height:50px;" />
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</div>

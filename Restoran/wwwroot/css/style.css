@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Manrope:wght@500&family=Nunito:wght@400;600;700;800;1000&family=Outfit:wght@300;400;600&family=Pacifico&display=swap');
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+
+  width: 100dvw;
+  /* height: 100dvh; */
+  overflow-x: hidden;
+}
+
+:root {
+  --primaryPadding: 20px;
+  --orange: #feaf39;
+  --lacivert: #353b4b;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Abril Fatface", sans-serif;
+}
+
+
+a{
+color: var(--orange);
+text-decoration: none;
+
+}
+
+p {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.landing-page {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 10px;
+  transform:translateY(-20px);
+}
+.landing-page::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/backgroundOfFirstPage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+
+  height: 100%;
+  width: 100%;
+
+  top: 0;
+  opacity: 0.3;
+  z-index: -5;
+}
+
+.header {
+  position: relative;
+
+}
+
+.header-flex-between {
+  width: 100%;
+  display: flex;
+  padding: var(--primaryPadding);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #353b4b;
+}
+
+.logos {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  flex-basis: 30%;
+  height: 9dvh;
+  display: flex;
+  align-items: center;
+}
+
+.img-logo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.burger-menu {
+  width: 10vw;
+}
+
+.navbar {
+  padding: 5px;
+
+  background-color: #353b4b;
+  display: none;
+}
+
+.list-item {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 5px;
+  text-transform: capitalize;
+  color: #feaf39;
+}
+
+.list-item > a:hover {
+  color: #d8eeff;
+}
+
+
+
+.body-of-landingPage-flex {
+  text-align: center;
+  padding: 6dvh;
+}
+
+.img-body {
+  width: 100%;
+  height: 200px;
+  
+}
+
+.txt-body {
+  margin-bottom: 10px;
+}
+
+.menu-tab {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* !second page */
+/* intersecrtion observer APi : tell you if in elment of the dom  is visible to end user */
+/* TODO: add some animation to this part after finishing the project  */
+
+.second-about-page {
+  /* border: 2px solid red ; */
+  padding: 25px 0;
+}
+.images-container {
+  width: 80%;
+  height: 400px;
+  margin: 10px auto;
+}
+
+.images-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 45%;
+
+  position: relative;
+}
+
+.first
+ {
+  mix-blend-mode: multiply;
+ }
+
+.images-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 60% 45%;
+}
+
+#hover-img {
+  position: absolute;
+  background-color: transparent;
+  left: 0;
+  mix-blend-mode: multiply;
+  opacity: 0;
+}
+
+.images-card:hover #hover-img {
+  opacity: 0.4;
+}
+
+.txt {
+  width: 90%;
+  margin: 0 auto;
+  /* text-wrap: balance; */
+}
+
+.title {
+  font-family: "Pacifico", sans-serif;
+  color: var(--orange);
+  text-align: center;
+}
+
+.txt h3 {
+ text-align: left;
+}
+
+/* subelerimiz sayfasi */
+
+.carousel {
+  height: 90dvh;
+  perspective: 250px;
+}
+.carousel .carousel-item {
+  width: 450px;
+  padding: 50px;
+  height: 700px;
+  text-align: center;
+}
+
+.card {
+  height: 100%;
+  border-radius: 15px;
+}
+
+.img-area {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.img-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/*  */
+
+.branches {
+  text-align: center;
+  margin: 200px 0;
+}
+
+.card h3 {
+  margin-bottom: 120px;
+}
+
+.branch-name:hover{
+  color: var(--orange);
+  user-select: none;
+  cursor:pointer;
+
+}
+.branch-link {
+  color: var(--lacivertn );
+}
+/*  yemek menu*/
+
+.yemek-categori {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.yemek-categori h4 {
+  border-bottom: 1px solid var(--lacivert, rgba(0, 0, 0, 0.6));
+  padding-bottom: 5px;
+  text-transform: capitalize;
+  /* font-size: 20px; */
+}
+.yemek-categori h4:hover {
+  color: var(--orange);
+}
+
+.yemek-categori sub {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.yemek-menu-container {
+  width: 90%;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+
+.yemek-carti {
+  height: 100px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  border: inset 2px #d1e5f5;
+  position: relative;
+  margin-bottom: 5px;
+  border-radius: 7px;
+  text-align: left;
+  text-wrap: balance;
+}
+
+.yemek-carti:hover {
+  background-color: var(--lacivert);
+  color: var(--orange);
+}
+
+.yemek-carti p {
+  text-indent: 10px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.price {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.yemek-img-con {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.yemek-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+/* TODO : try doing hover with transition  */
+/* .yemek-img:hover {
+  width: 250%;
+  height: 250%;
+  position: absolute;
+
+} */
+
+/* Footer css  */
+
+.footer {
+  background-color: var(--lacivert);
+  position: relative;
+  padding-top: 40px;
+}
+.footer h1,
+.footer h2,
+.footer p {
+  color: var(--orange);
+}
+
+.up {
+  padding: 20px;
+
+}
+
+.email-input {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+}
+
+#input {
+  width: 100%;
+  line-height: 40px;
+  border-radius: 9px;
+  background-color: white;
+}
+
+.footer-btn {
+  padding: 10px;
+  outline: none;
+
+  width: 50%;
+  margin: 10px 0 0 0;
+  border-radius: 9px;
+}
+
+.up p {
+  margin-bottom: 20px;
+}
+
+.up h2 {
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+/** how to control spaces between the lines  */
+.down {
+  width: 100%;
+  margin-top: 10px;
+  color: var(--orange);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  /* height: 500px; */
+}
+.down p {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: 600;
+}
+
+.huddle {
+  width: auto;
+  display: flex;
+  text-indent: 20px;
+  margin: 20px 0;
+
+  align-items: center;
+}
+
+.huddle p {
+  margin: 0;
+}
+
+.icons {
+  width: 100%;
+  margin-top: 20px;
+}
+.icons i {
+  font-size: 30px;
+  color: white;
+  margin-right: 20px;
+}
+
+button {
+  outline: none;
+}
+
+/* animations  */
+.circle-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+
+.rotate {
+  animation: rotation 9s;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 2s;
+}
+
+.show {
+  opacity: 1;
+}
+
+/* Nothing will happen yet, because we need to define the animation property’s rotation function. Add this CSS keyframe rule to your stylesheet: */
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.linear {
+  animation-timing-function: linear;
+}
+.infinite {
+  animation-iteration-count: infinite;
+}
+
+/* mobile up to 480px
+tablet up 1199
+
+ */
+
+@media only screen and (min-width: 830px) {
+  .body-of-landingPage-flex {
+    height: 90dvh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+
+
+  .txt-body {
+    padding: 0 0 0 20px;
+    text-align: left;
+  }
+  .img-body {
+    height: 400px;
+  }
+
+  .second-about-page {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 80px 0;
+
+    align-items: center;
+  }
+  .images-container {
+    width: 40%;
+  }
+  .txt {
+    width: 40%;
+  }
+  .txt p {
+    text-wrap: balance;
+  }
+
+  /* /footer  */
+
+  .up {
+    height: 300px;
+  }
+
+
+
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .footer {
+    align-items: flex-start;
+  }
+
+  .email-input {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .email-input button {
+    padding: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  .up {
+    width: 50%;
+  }
+  .down {
+    width: 30%;
+    padding-top: 0;
+  }
+
+  .huddle1 {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .header-flex-between {
+    flex-direction: row;
+  }
+  .img-body {
+    margin-right: -150px;
+  }
+  .logos {
+    width: 30%;
+  }
+  .navbar {
+    display: flex;
+  }
+  .navbar ul > li {
+    display: inline;
+  }
+
+  /* this can be from the first media  */
+  .yemek-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .yemek-carti {
+    flex-basis: 48%;
+  }
+  /* this can finish */
+}

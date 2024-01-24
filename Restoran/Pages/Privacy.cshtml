@@ -1,0 +1,449 @@
+﻿@page
+@model PrivacyModel
+
+@{
+
+    Layout = "";
+}
+@*
+
+@foreach (var c in Kullanici.getAllData())
+{
+    var MyOrders = Model.order.Select(s=>s).Where(s => s.Email == User.Identity?.Name! && s.Adı == c.Adı && s.SoyAdı == c.SoyAdı && s.UserId == c.UserId);
+
+    if (c.Email == User.Identity?.Name! && c.UserId == UserId)
+    {
+
+        foreach (var item in MyOrders)
+        {
+            <form method="post" asp-controller="Order" asp-action="Delete">
+                <input type="hidden" name="id" value="@item.id" />
+                <input type="submit" onclick="messaj()" value="Delete" style="font-family:' Abril Fatface', 'sans-serif';" class="btn" />
+            </form>
+            <p>@item.Yemek_Adi</p>
+            <p>@item.fiyat</p>
+        }
+
+    }
+}
+<script>
+    function messaj() {
+        Swal.fire(
+            'Good job!',
+            'basariyla silindi',
+            'success'
+        )
+    }
+
+    new DateTimePickerComponent.DateTimePicker("select_date");
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> *@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head asp-append-version="true">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="icon" href="~/dish.png" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="~/css/soparis.css" rel="stylesheet" />
+    @* <link href="~/css/style.css" rel="stylesheet" /> *@
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    @inject MyData.Ihelper<MyClasses.Kullanici> Kullanici
+    @inject MyData.Ihelper<MyClasses.Order> orders
+
+    @using Microsoft.AspNetCore.Identity
+    @inject SignInManager<IdentityUser> SignInManager
+    @inject UserManager<IdentityUser> UserManager
+
+    @using Microsoft.AspNetCore.Authorization
+    @using System.Security.Claims
+    @inject IAuthorizationService AuthorizationService
+    @{
+        var UserId="";
+        var result = AuthorizationService.AuthorizeAsync(User, "Admin");
+        if(User.FindFirst(ClaimTypes.NameIdentifier).Value != null)
+        {
+             UserId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+        }
+        var x = 0;
+    }
+    <section class="landing-page">
+        <!-- header start -->
+        <header class="header">
+            <div class="header-flex-between">
+                <div class="logos">
+                    <div class="logo">
+                        <img src="../images/sushi.png" alt="" class="img-logo" />
+                        <img src="../images/Shinobi Japanese Restaurant.png"
+                             alt=""
+                             class="img-logo" />
+                    </div>
+
+                    <div class="burger-menu">
+                        <img src="../images/burger-menu.png"
+                             alt=""
+                             class="img-logo"
+                             id="bur-menu" />
+                    </div>
+                </div>
+
+                <div class="navbar" style="border:none">
+                    <ul class="list" style="border:none" >
+                        <li class="list-item" style="border:none" ><a href="~/Index">Home</a></li>
+
+                        <li class="list-item" style="border:none" ><a href="~/Index#about">about</a></li>
+
+                        <li class="list-item" style="border:none" ><a href="~/Index#branches">branches</a></li>
+
+                        <li class="list-item" style="border:none" ><a href="~/Index#menu">menu</a></li>
+
+                        <li class="list-item" style="border:none" ><a href="~/Index#footer">Contact</a></li>
+                        <!-- TODO : BURADA DROPDOWN EKLE  -->
+                        @*  <li class="list-item"><a href="./register.html">register</a></li>
+                        <li class="list-item"><a href="./login.html">login</a></li>
+                        <li class="list-item list-item--img">
+                        <a href="./siparis.html">
+                        <img src="../images/procurement (1).png" alt="">
+                        </a>
+                        </li> *@
+                    </ul>
+
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+        <div class="orders">
+
+            <h3 class="title">Siparisleriniz</h3>
+        </div>
+
+        <table class="table full-cover">
+            <thead>
+                <tr>
+                    <th>
+                        image
+                    </th>
+                    <th colspan="3">
+                        product
+                    </th>
+                    <th>
+                        price
+                    </th>
+                    <th>
+                        Quantity
+                    </th>
+                    <th>
+                        total
+                    </th>
+                    <th>
+                        remove
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var c in Kullanici.getAllData())
+                {
+                    var MyOrders = Model.order.Select(s => s).Where(s => s.Email == User.Identity?.Name! && s.Adı == c.Adı && s.SoyAdı == c.SoyAdı && s.UserId == c.UserId);
+
+                    if (c.Email == User.Identity?.Name! && c.UserId == UserId)
+                    {
+
+                        foreach (var item in MyOrders)
+                        {
+                            <!-- -------------------- -->
+                            <tr class="raw" style="margin-left:-15px">
+                                <td class="img-col">
+
+                                    <img src="../images/YemekMenu/@item.Resim" style="border-radius:50%; border:10px solid orange" alt="">
+
+                                </td>
+
+                                <td colspan="3" class="name-col">
+                                    @item.Yemek_Adi
+                                </td>
+
+                                <td>
+                                    <p class="price-col">@item.fiyat</p><span>$</span>
+                                </td>
+
+                                <td class="quantity-col">
+                                    <div>
+                                        <i class="fa-solid fa-plus increase"></i>
+                                        <div class="adet">
+                                            <p class="adet-txt"> 1 </p>
+                                        </div>
+
+                                        <i class="fa-solid fa-minus decrease"></i>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <p class="total-col">@item.fiyat</p><span>$</span>
+                                </td>
+
+                                <td class="delete-col">
+                                    <form method="post" asp-controller="Order" asp-action="Delete">
+
+                                        <input type="hidden" name="id" value="@item.id" />
+                                        <input type="submit" onclick="messaj()" value="Delete" style="font-family:' Abril Fatface', 'sans-serif';" class="btn" />
+                                       
+                                    </form>
+                                </td>
+
+                            </tr>
+
+
+                        }
+                    }
+                }
+                <!-- --------------------------------------- -->
+               @*  <tr class="raw">
+                <td class="img-col">
+                <img src="https://picsum.photos/300/100" alt="">
+                </td>
+
+                <td colspan="3" class="name-col">
+                pizza magarita italiano ananaso
+                </td>
+
+                <td>
+                <p class="price-col">50</p><span>$</span>
+                </td>
+
+                <td class="quantity-col">
+                <div>
+                <i class="fa-solid fa-plus increase increase"></i>
+                <div class="adet">
+                <p class="adet-txt"> 1 </p>
+                </div>
+
+                <i class="fa-solid fa-minus decrease  decrease" onclick="decrease"></i>
+                </div>
+                </td>
+
+                <td>
+                <p class="total-col">50</p><span>$</span>
+                </td>
+
+                <td class="delete-col">
+                <i class="fa-solid fa-x"></i>
+                </td>
+
+                </tr>  *@
+            </tbody>
+        </table>
+
+    </section>
+    <script>
+        function messaj() {
+            Swal.fire(
+                'Good job!',
+                'basariyla silindi',
+                'success'
+            )
+        }
+
+        new DateTimePickerComponent.DateTimePicker("select_date");
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- the order finished   -->
+    <!-- payment -->
+
+   
+    <section class="paymentCon" style="background-color: #353b4b; width: 60%; margin: 0 auto; padding: 20px 0 ; box-shadow: 0 0 0 100vh #353b4b;">
+
+        <div class='card-wrapper'></div>
+        <form action="">
+            <input style="width: 70%;  display:block; margin: 0 auto;" ="text" id="number" placeholder="cardNumber">
+            <input style="width: 70%;  display:block; margin: 0 auto;" ="text" id="expiry" placeholder="expiry">
+            <input style="width: 70%;  display:block; margin: 0 auto;" ="text" id="cvc" placeholder="cvc">
+            <input style="width: 70%;  display:block; margin: 0 auto;" ="text" id="name" placeholder="Full Name">
+            <div style=" width:70%;  margin: 0 auto ; display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   ">
+                <button class="ode-btn" style="margin: 10px auto  ;
+      padding: 10px 30px; border-radius: 12px; border: none;">
+                    Öde
+                </button>
+                <span class="ode" style="color: #ffd;"></span>
+            </div>
+        </form>
+    </section>
+
+
+
+   
+
+
+
+
+
+
+
+    <!-- defer attribute to make sure that  js will run after html body  -->
+ @*    <script defer src="~/index.js"></script> *@
+    <script src="~/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    
+    <script src="~/card-master/dist/card.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".carousel").carousel({
+                padding: 100,
+            });
+            autoplay();
+            function autoplay() {
+                $(".carousel").carousel("next");
+                setTimeout(autoplay, 4500);
+            }
+        });
+
+        // $('.carousel.carousel-slider').carousel({
+        //   fullWidth: true,
+        //   indicators: true
+
+        // });
+        $('.scrollspy').scrollSpy();
+    
+
+        function odeGuncelle() {
+
+            let ode = document.querySelector(".ode");
+            let toplam = 0;
+            document.querySelectorAll(".total-col").forEach(item => {
+                console.log(item.innerHTML)
+                toplam += Number(item.innerHTML)
+                console.log(toplam)
+            })
+            ode.innerHTML = String(toplam) + "$";
+
+        }
+
+        odeGuncelle()
+        function decrease(adet) {
+            adet -= 1;
+            console.log("decrease")
+            document.querySelector(".adet-txt").innerHTML = adet;
+
+        }
+        function increase(adet) {
+            console.log("increae")
+            adet += 1;
+            document.querySelector(".adet-txt").innerHTML = adet;
+
+        }
+
+
+        document.querySelectorAll(".decrease").forEach((item, index) => {
+            item.addEventListener("click", () => {
+
+                var adet = Number(document.querySelectorAll(".adet-txt")[index].innerHTML)
+                var price = Number(document.querySelectorAll('.price-col')[index].innerHTML)
+
+                if (adet === 1) return;
+                adet -= 1;
+                document.querySelectorAll(".adet-txt")[index].innerHTML = adet;
+                var toplam = adet * price;
+                document.querySelectorAll(".total-col")[index].innerHTML = toplam;
+                odeGuncelle()
+
+            })
+        })
+
+
+        document.querySelectorAll(".increase").forEach((item, index) => {
+            item.addEventListener("click", () => {
+
+                var adet = Number(document.querySelectorAll(".adet-txt")[index].innerHTML)
+                var price = Number(document.querySelectorAll(".price-col")[index].innerText)
+
+                adet += 1;
+                var toplam = adet * price;
+
+
+                document.querySelectorAll(".adet-txt")[index].innerHTML = adet;
+                document.querySelectorAll(".total-col")[index].innerHTML = toplam;
+                odeGuncelle()
+
+            }
+
+            )
+        })
+
+
+        document.querySelector(".ode-btn").addEventListener("submit", () => {
+            document.querySelector(".ode").innerHTML = "0 $";
+        })
+
+
+ 
+
+    
+
+        var card = new Card({
+            // a selector or DOM element for the form where users will
+            // be entering their information
+            form: 'form', // *required*
+            // a selector or DOM element for the container
+            // where you want the card to appear
+            container: '.card-wrapper', // *required*
+
+            formSelectors: {
+                numberInput: 'input#number', // optional — default input[name="number"]
+                expiryInput: 'input#expiry', // optional — default input[name="expiry"]
+                cvcInput: 'input#cvc', // optional — default input[name="cvc"]
+                nameInput: 'input#name' // optional - defaults input[name="name"]
+            },
+
+            width: 200, // optional — default 350px
+            formatting: true, // optional - default true
+
+            // Strings for translation - optional
+            messages: {
+                validDate: 'valid\ndate', // optional - default 'valid\nthru'
+                monthYear: 'mm/yyyy', // optional - default 'month/year'
+            },
+
+            // Default placeholders for rendered fields - optional
+            placeholders: {
+                number: '•••• •••• •••• ••••',
+                name: 'Full Name',
+                expiry: '••/••',
+                cvc: '•••'
+            },
+
+            masks: {
+                cardNumber: '•' // optional - mask card number
+            },
+
+            // if true, will log helpful messages for setting up Card
+            debug: false // optional - default false
+        });
+        console.log(card);
+    </script>
+
+</body>
+</html>
+
+
+
+
+
